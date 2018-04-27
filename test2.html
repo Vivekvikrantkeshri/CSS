@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ </head>
+<script>
+function checkForm()
+{
+	var user = document.getelementById('user').value;
+	if (user.length <5 )
+	{
+		alert("Invalid userName");
+		return false;
+	}
+	else
+	{
+         return true;
+	}
+}
+   function checkUser()
+    {
+        var user = document.getElementById('user').value;
+		var element = document.getElementById('labeluser');
+        if (user.length < 5 )
+        {
+			element.innerHTML = "Invalid UserName";
+			element.style.color = "red";
+        }
+		else
+		{
+            element.innerHTML = "Valid UserName";
+			element.style.color = "green";
+		}
+
+	}
+</script>
+ <form Onsubmit = return checkForm();>
+ <input type='text'id='user' onblur='checkuser()'/>
+ <label id ='label user'></label>
+ <input type 'submit'= value 'submit'>
+ </form>
+  
+ </body>
+</html>
